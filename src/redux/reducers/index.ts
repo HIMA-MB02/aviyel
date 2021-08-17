@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import invoiceReducer from './InvoiceReducer';
 
-export default combineReducers({
+const rootReducer = combineReducers({
     invoiceReducer
 });
 
-export type RootState = ReturnType<typeof combineReducers>;
+export default rootReducer;
+export type RootState = ReturnType<typeof rootReducer>;

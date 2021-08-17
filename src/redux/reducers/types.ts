@@ -4,5 +4,13 @@ export interface IAction {
 };
 
 export interface IInvoiceReducer {
-    invoiceList: []
+    invoiceList: IInvoiceList[];
+}
+
+export interface IInvoiceList {
+    id: number;
+    timestamp: string;
+    itemsCount: number;
+    createdBy: string;
+    amount: number;
 }

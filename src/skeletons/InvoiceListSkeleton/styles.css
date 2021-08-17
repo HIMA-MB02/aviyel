@@ -1,0 +1,19 @@
+.invoice-number {
+    width: 200px !important;
+}
+
+.invoice-items {
+    width: 175px !important;
+}
+
+.invoice-name {
+    width: 225px !important;
+}
+
+.invoice-timestamp {
+    width: 225px !important;
+}
+
+.invoice-amount {
+    width: 150px !important;
+}

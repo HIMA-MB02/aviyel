@@ -1,5 +1,3 @@
-import SkeletonCryptoListRow from './SkeletonCryptoListRow';
+import InvoiceListSkeleton from './InvoiceListSkeleton';
 
-export {
-    SkeletonCryptoListRow
-}
+export { InvoiceListSkeleton };

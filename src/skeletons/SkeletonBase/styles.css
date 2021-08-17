@@ -2,6 +2,19 @@
     background-color: #ddd;
     margin: 10px 0;
     border-radius: 4px;
+    animation-duration: 650ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.25;
+    }
 }
 
 .skeleton.text {
