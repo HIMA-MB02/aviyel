@@ -1,19 +1,26 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchInvoiceList } from '../../../redux';
+import { fetchInvoiceList, ReduxState } from '../../../redux';
 import { InvoiceListItem } from '../../atoms';
 
 const InvoiceList: React.FunctionComponent = () => {
     const dispatch = useDispatch();
-    const invoiceList = useSelector(
-        (state) => state.invoiceReducer.invoiceList
-    );
+    const invoiceList = useSelector<ReduxState>((state) => state);
+    console.log(invoiceList);
     React.useEffect(() => {
         dispatch(fetchInvoiceList());
     }, []);
     return (
         <>
-            {invoicesList.map((invoice, index) => (
+            {[
+                {
+                    id: 232,
+                    timestamp: new Date().toLocaleString(),
+                    itemsCount: 1,
+                    createdBy: 'Himanshu Ganapavarapu',
+                    amount: 5000
+                }
+            ].map((invoice, index) => (
                 <InvoiceListItem
                     key={`invoice-list-${index}`}
                     id={invoice.id}

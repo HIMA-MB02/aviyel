@@ -7,9 +7,7 @@ const initialState = {};
 const store = createStore(
     rootReducer,
     initialState,
-    compose(
-        applyMiddleware(thunk),
-    )
+    compose(applyMiddleware(thunk))
 );
 export type AppDispatch = typeof store.dispatch;
 export default store;

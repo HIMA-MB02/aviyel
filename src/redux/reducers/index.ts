@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import invoiceReducer from "./InvoiceReducer";
+import { combineReducers } from 'redux';
+import invoiceReducer from './InvoiceReducer';
 
 export default combineReducers({
     invoiceReducer

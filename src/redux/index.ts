@@ -1,7 +1,7 @@
 import store from './store';
+import { RootState } from './reducers';
 export { store };
 export * from './reducers/InvoiceReducer/actions';
 
 // Types and Interfaces
-import { RootState } from './reducers';
-export type State = RootState;
+export type ReduxState = RootState;

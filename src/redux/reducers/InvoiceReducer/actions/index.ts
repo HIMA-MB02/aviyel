@@ -2,7 +2,7 @@
 import { initialInvoiceList } from '../../../../utils/mock';
 import { AppDispatch } from '../../../store';
 
-import { ACTION_TYPES } from './types'
+import { ACTION_TYPES } from './types';
 
 // let api = 'https://api.nomics.com/v1';
 export const fetchInvoiceList = () => {
@@ -13,7 +13,7 @@ export const fetchInvoiceList = () => {
                 payload: {
                     invoiceList: initialInvoiceList
                 }
-            })
+            });
         }, 1000);
     };
 };
