@@ -1,8 +1,11 @@
 import React from 'react';
+import { InvoiceListItem, Navbar } from './components/atoms';
 
 const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
+    <div>
+      <Navbar />
+      <InvoiceListItem />
     </div>
   );
 }

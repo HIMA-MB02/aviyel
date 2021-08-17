@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Invoicing App",
+  "name": "Invoicing App for Aviyel",
   "icons": [
     {
       "src": "favicon.ico",
