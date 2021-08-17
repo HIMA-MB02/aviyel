@@ -1,0 +1,3 @@
+export const ACTION_TYPES = {
+    FETCH_INVOICE_LIST: 'FETCH_INVOICE_LIST'
+};

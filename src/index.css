@@ -114,3 +114,14 @@ code {
 .align-cell-left {
   text-align: left;
 }
+
+.full-h {
+  height: 100%;
+  max-height: 100%;
+}
+
+#app-root {
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+}

@@ -1,17 +1,12 @@
 import React from 'react';
-import { InvoiceListItem, Navbar } from './components/atoms';
+import { Navbar } from './components/atoms';
+import { SPAContainer } from './components/pages';
 
 const App: React.FunctionComponent = () => {
     return (
-        <div>
+        <div id='app-root'>
             <Navbar />
-            <InvoiceListItem
-                invoiceNumber={232}
-                timestamp={new Date()}
-                itemsCount={5}
-                createdBy={'Himanshu Ganapavarapu'}
-                amount={5000}
-            />
+            <SPAContainer />
         </div>
     );
 };

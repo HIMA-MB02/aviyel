@@ -1,0 +1,5 @@
+.infinite-scroll {
+    overflow-y: auto;
+    white-space: nowrap;
+    padding-bottom: 5% !important;
+}
