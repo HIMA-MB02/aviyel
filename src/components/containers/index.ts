@@ -1,7 +1,7 @@
-import Display from './Display';
 import InvoiceList from './InvoiceList';
+import InvoiceDocumentMeta from './InvoiceDocumentMeta';
 
 export {
-    Display,
-    InvoiceList
+    InvoiceList,
+    InvoiceDocumentMeta
 };

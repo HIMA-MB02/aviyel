@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
-import { Display, InvoiceList } from '../../containers';
+import { Display } from '../';
+import { InvoiceList } from '../../containers';
 
 const SPAContainer: React.FunctionComponent = () => {
     return (

@@ -1,3 +1,4 @@
 import SPAContainer from './SPAContainer';
-
-export { SPAContainer };
+import InvoiceDetails from './InvoiceDetails';
+import Display from './Display';
+export { SPAContainer, Display, InvoiceDetails };
