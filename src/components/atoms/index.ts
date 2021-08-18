@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
 import InvoiceListItem from './InvoiceListItem';
 import InvoiceDocument from './InvoiceDocument';
-export { Navbar, InvoiceListItem, InvoiceDocument };
+import DefaultDocument from './DefaultDocument';
+export { Navbar, InvoiceListItem, InvoiceDocument, DefaultDocument };
