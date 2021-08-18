@@ -1,6 +1,5 @@
 .id-container {
     background-color: var(--bs-white);
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,11 +8,6 @@
     padding-top: 1.8rem;
     padding-left: 4rem;
     padding-right: 4rem;
-}
-
-.iv-title {
-    width: 100%;
-    display: block;
 }
 
 .iv-title-text {

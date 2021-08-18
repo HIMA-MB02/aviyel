@@ -32,7 +32,7 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
                     <div className='list-row-item list-row-title'>{amount}</div>
                 </div>
             </div>
-            <hr />
+            <hr className='list-item-hr'/>
         </>
     );
 };

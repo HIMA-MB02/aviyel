@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
+    background-color: var(--bs-light);
 }
 
 .list-row:hover {
@@ -37,4 +38,10 @@
 .list-row-title {
   font-size: 20px;
   font-weight: 700;
+}
+
+.list-item-hr {
+  margin: 0;
+  opacity: 1;
+  border: 1px;
 }

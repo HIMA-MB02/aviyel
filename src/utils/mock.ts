@@ -116,6 +116,146 @@ export const initialDocumentList: IDocument[] = [
                 itemQuantity: 1,
                 itemUnitPrice: 650,
                 itemPrice: 650
+            },
+            {
+                id: 5,
+                itemName: 'Prawn and Chicken Sui Mai',
+                itemQuantity: 2,
+                itemUnitPrice: 300,
+                itemPrice: 600
+            },
+            {
+                id: 6,
+                itemName: 'Long Island Ice Tea',
+                itemQuantity: 2,
+                itemUnitPrice: 600,
+                itemPrice: 1200
+            },
+            {
+                id: 7,
+                itemName: 'Chicken Tandoori',
+                itemQuantity: 2,
+                itemUnitPrice: 450,
+                itemPrice: 900
+            },
+            {
+                id: 8,
+                itemName: 'Al Fungi Pizza',
+                itemQuantity: 1,
+                itemUnitPrice: 650,
+                itemPrice: 650
+            },
+            {
+                id: 1,
+                itemName: 'Prawn and Chicken Sui Mai',
+                itemQuantity: 2,
+                itemUnitPrice: 300,
+                itemPrice: 600
+            },
+            {
+                id: 2,
+                itemName: 'Long Island Ice Tea',
+                itemQuantity: 2,
+                itemUnitPrice: 600,
+                itemPrice: 1200
+            },
+            {
+                id: 3,
+                itemName: 'Chicken Tandoori',
+                itemQuantity: 2,
+                itemUnitPrice: 450,
+                itemPrice: 900
+            },
+            {
+                id: 4,
+                itemName: 'Al Fungi Pizza',
+                itemQuantity: 1,
+                itemUnitPrice: 650,
+                itemPrice: 650
+            },
+            {
+                id: 5,
+                itemName: 'Prawn and Chicken Sui Mai',
+                itemQuantity: 2,
+                itemUnitPrice: 300,
+                itemPrice: 600
+            },
+            {
+                id: 6,
+                itemName: 'Long Island Ice Tea',
+                itemQuantity: 2,
+                itemUnitPrice: 600,
+                itemPrice: 1200
+            },
+            {
+                id: 7,
+                itemName: 'Chicken Tandoori',
+                itemQuantity: 2,
+                itemUnitPrice: 450,
+                itemPrice: 900
+            },
+            {
+                id: 8,
+                itemName: 'Al Fungi Pizza',
+                itemQuantity: 1,
+                itemUnitPrice: 650,
+                itemPrice: 650
+            },
+            {
+                id: 1,
+                itemName: 'Prawn and Chicken Sui Mai',
+                itemQuantity: 2,
+                itemUnitPrice: 300,
+                itemPrice: 600
+            },
+            {
+                id: 2,
+                itemName: 'Long Island Ice Tea',
+                itemQuantity: 2,
+                itemUnitPrice: 600,
+                itemPrice: 1200
+            },
+            {
+                id: 3,
+                itemName: 'Chicken Tandoori',
+                itemQuantity: 2,
+                itemUnitPrice: 450,
+                itemPrice: 900
+            },
+            {
+                id: 4,
+                itemName: 'Al Fungi Pizza',
+                itemQuantity: 1,
+                itemUnitPrice: 650,
+                itemPrice: 650
+            },
+            {
+                id: 5,
+                itemName: 'Prawn and Chicken Sui Mai',
+                itemQuantity: 2,
+                itemUnitPrice: 300,
+                itemPrice: 600
+            },
+            {
+                id: 6,
+                itemName: 'Long Island Ice Tea',
+                itemQuantity: 2,
+                itemUnitPrice: 600,
+                itemPrice: 1200
+            },
+            {
+                id: 7,
+                itemName: 'Chicken Tandoori',
+                itemQuantity: 2,
+                itemUnitPrice: 450,
+                itemPrice: 900
+            },
+            {
+                id: 8,
+                itemName: 'Al Fungi Pizza',
+                itemQuantity: 1,
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ],
         invoiceTotals: {

@@ -1,7 +1,11 @@
 import React from 'react';
 import './styles.css';
 import { InvoiceDocument } from '../../atoms';
-import { InvoiceDocumentMeta, InvoiceDocumentTable, InvoiceTotals } from '../../containers';
+import {
+    InvoiceDocumentMeta,
+    InvoiceDocumentTable,
+    InvoiceTotals
+} from '../../containers';
 import { useSelector } from 'react-redux';
 import { ReduxState } from '../../../redux';
 
@@ -17,11 +21,7 @@ const InvoiceDetails: React.FunctionComponent = () => {
 
     return (
         <div className='id-container'>
-            <div className='iv-title'>
-                <h6 className='text-secondary iv-title-text'>
-                    INVOICE DETAILS
-                </h6>
-            </div>
+            <h5 className='text-secondary iv-title-text'>INVOICE DETAILS</h5>
             <InvoiceDocument>
                 <InvoiceDocumentMeta
                     id={currentDocument.meta.id}
