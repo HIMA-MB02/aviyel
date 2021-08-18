@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchInvoiceList, ReduxState } from '../../../redux';
 import InvoiceListSkeleton from '../../../skeletons/InvoiceListSkeleton';
-import { InvoiceListItem } from '../../atoms';
+import { InvoiceListItem, Search } from '../../atoms';
 
 const InvoiceList: React.FunctionComponent = () => {
     const dispatch = useDispatch();
@@ -14,6 +14,8 @@ const InvoiceList: React.FunctionComponent = () => {
     }, []);
     return (
         <>
+            <Search />
+            <hr />
             {invoiceList.map((invoice, index) => (
                 <InvoiceListItem
                     key={`invoice-list-${index}`}

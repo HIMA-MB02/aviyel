@@ -12,6 +12,17 @@ body {
   padding-bottom: 6%;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+input:active,
+select:active,
+textarea:active,
+button:active  {
+    outline: none;
+}
+
 .text-primary {
   color: var(--bs-primary) !important;
 }

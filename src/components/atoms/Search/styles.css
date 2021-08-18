@@ -1,0 +1,15 @@
+.searchbox {
+    margin: 1rem;
+}
+
+.search-input {
+    border-radius: 6px;
+    color: white;
+    -webkit-appearance: none;
+}
+
+.search-input:active,
+.search-input:focus {
+    color: white !important;
+    outline: none;
+}

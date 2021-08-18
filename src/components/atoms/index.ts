@@ -4,4 +4,13 @@ import InvoiceDocument from './InvoiceDocument';
 import DefaultDocument from './DefaultDocument';
 import ErrorDocument from './ErrorDocument';
 import InvoiceDocumentRow from './InvoiceDocumentRow';
-export { Navbar, InvoiceListItem, InvoiceDocument, DefaultDocument, ErrorDocument, InvoiceDocumentRow };
+import Search from './Search';
+export {
+    Navbar,
+    InvoiceListItem,
+    InvoiceDocument,
+    DefaultDocument,
+    ErrorDocument,
+    InvoiceDocumentRow,
+    Search
+};
