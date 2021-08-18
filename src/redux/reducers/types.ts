@@ -17,15 +17,16 @@ export interface IDocument {
         id: number;
         timestamp: string;
     };
-    invoiceItems: IInvoiceItems[];
+    invoiceItems: IInvoiceItem[];
 }
 
-export interface IInvoiceItems {
-    id: number;
+export interface IInvoiceItem {
+    index?: number;
+    id?: number;
     itemName: string;
     itemQuantity: number;
+    itemUnitPrice: number;
     itemPrice: number;
-    itemTotalPrice: number;
 }
 
 export interface IInvoiceList {

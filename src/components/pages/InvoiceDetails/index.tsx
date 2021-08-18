@@ -29,7 +29,7 @@ const InvoiceDetails: React.FunctionComponent = () => {
                     createdForName={currentDocument.meta.customerName}
                     createdForEmail={currentDocument.meta.customerEmail}
                 />
-                <InvoiceDocumentTable />
+                <InvoiceDocumentTable items={currentDocument.invoiceItems}/>
             </InvoiceDocument>
         </div>
     );

@@ -93,29 +93,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -131,29 +131,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -169,29 +169,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -207,29 +207,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -245,29 +245,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -283,29 +283,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -321,29 +321,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -359,29 +359,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -397,29 +397,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -435,29 +435,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     },
@@ -473,29 +473,29 @@ export const initialDocumentList: IDocument[] = [
                 id: 1,
                 itemName: 'Prawn and Chicken Sui Mai',
                 itemQuantity: 2,
-                itemPrice: 300,
-                itemTotalPrice: 600
+                itemUnitPrice: 300,
+                itemPrice: 600
             },
             {
                 id: 2,
                 itemName: 'Long Island Ice Tea',
                 itemQuantity: 2,
-                itemPrice: 600,
-                itemTotalPrice: 1200
+                itemUnitPrice: 600,
+                itemPrice: 1200
             },
             {
                 id: 3,
                 itemName: 'Chicken Tandoori',
                 itemQuantity: 2,
-                itemPrice: 450,
-                itemTotalPrice: 900
+                itemUnitPrice: 450,
+                itemPrice: 900
             },
             {
                 id: 4,
                 itemName: 'Al Fungi Pizza',
                 itemQuantity: 1,
-                itemPrice: 650,
-                itemTotalPrice: 650
+                itemUnitPrice: 650,
+                itemPrice: 650
             }
         ]
     }
