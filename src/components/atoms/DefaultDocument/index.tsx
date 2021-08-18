@@ -8,7 +8,6 @@ const DefaultDocument: React.FunctionComponent = () => {
         (state: ReduxState) =>
             state.invoiceReducer.currentlySelectedDocumentError
     );
-    console.log(isCurrentlySelctedInvoiceError);
     return (
         <div className='id-container'>
             <InvoiceDocument>

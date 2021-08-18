@@ -43,3 +43,53 @@ export const formatRupee = (price: number) => {
         </>
     );
 };
+
+export const regexValidations = {
+    email: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9-]+[.][a-zA-Z]+$/,
+    phone: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
+    password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[#?!@$%^&*-]).{6,32}$/
+};
+
+export const formValidator = (name: string, value: string): string => {
+    let errorValue = '';
+    switch (name) {
+    case 'name': {
+        if (!value.trim().length) {
+            errorValue = 'Please enter a valid name';
+        }
+        break;
+    }
+    case 'addressline1': {
+        if (!value.trim().length) {
+            errorValue = 'Please enter a valid address';
+        }
+        break;
+    }
+    case 'email': {
+        const isEmailRegexValid = regexValidations.email.test(
+            value.toLowerCase()
+        );
+        if (!isEmailRegexValid) {
+            errorValue = 'Please enter a valid email';
+        }
+        break;
+    }
+    case 'password': {
+        const isPasswordRegexValid = regexValidations.password.test(value);
+        if (!value.length) {
+            errorValue = 'Please enter a valid password';
+        } else if (value.length < 6 || value.length > 32) {
+            errorValue =
+                'Password should be at least from 6 to 32 characters';
+        } else if (!isPasswordRegexValid) {
+            errorValue =
+                'Password should have to include alpha-numberic and special characters';
+        }
+        break;
+    }
+    default:
+        break;
+    }
+
+    return errorValue;
+};

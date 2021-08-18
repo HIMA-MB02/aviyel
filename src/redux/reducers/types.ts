@@ -8,6 +8,7 @@ export interface IInvoiceReducer {
     invoiceDocumentList: IDocument[];
     currentlySelectedDocumentId: number | null;
     currentlySelectedDocumentError: string | null;
+    searchValue: string;
 }
 
 export interface IDocument {

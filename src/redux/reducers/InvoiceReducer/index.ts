@@ -3,6 +3,7 @@ import { IAction, IInvoiceReducer } from '../types';
 
 const initialState: IInvoiceReducer = {
     invoiceList: [],
+    searchValue: '',
     invoiceDocumentList: [],
     currentlySelectedDocumentId: null,
     currentlySelectedDocumentError: null
@@ -44,6 +45,11 @@ const invoiceReducer = (
                 payload.currentlySelectedDocumentId,
             currentlySelectedDocumentError:
                 payload.currentlySelectedDocumentError
+        };
+    case ACTION_TYPES.SET_SEARCH_VALUE:
+        return {
+            ..._state,
+            searchValue: payload.searchValue
         };
     default:
         return _state;

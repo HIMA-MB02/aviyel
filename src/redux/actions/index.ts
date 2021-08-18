@@ -2,6 +2,7 @@
 import { ReduxState } from '..';
 import { fetchDocAPI } from '../../api/getAPI';
 import { initialInvoiceList } from '../../utils/mock';
+import { IAction } from '../reducers/types';
 import { AppDispatch } from '../store';
 
 import { ACTION_TYPES } from './types';
@@ -59,6 +60,15 @@ export const fetchDocument = (id: number) => {
                     }
                 });
             }
+        }
+    };
+};
+
+export const setSearchValue = (searchValue: string): IAction => {
+    return {
+        type: ACTION_TYPES.SET_SEARCH_VALUE,
+        payload: {
+            searchValue
         }
     };
 };
