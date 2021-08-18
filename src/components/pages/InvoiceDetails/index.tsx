@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import { InvoiceDocument } from '../../atoms';
-import { InvoiceDocumentMeta, InvoiceDocumentTable } from '../../containers';
+import { InvoiceDocumentMeta, InvoiceDocumentTable, InvoiceTotals } from '../../containers';
 import { useSelector } from 'react-redux';
 import { ReduxState } from '../../../redux';
 
@@ -29,7 +29,8 @@ const InvoiceDetails: React.FunctionComponent = () => {
                     createdForName={currentDocument.meta.customerName}
                     createdForEmail={currentDocument.meta.customerEmail}
                 />
-                <InvoiceDocumentTable items={currentDocument.invoiceItems}/>
+                <InvoiceDocumentTable items={currentDocument.invoiceItems} />
+                <InvoiceTotals {...currentDocument.invoiceTotals} />
             </InvoiceDocument>
         </div>
     );

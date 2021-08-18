@@ -18,6 +18,12 @@ export interface IDocument {
         timestamp: string;
     };
     invoiceItems: IInvoiceItem[];
+    invoiceTotals: {
+        subTotal: number;
+        tax: number;
+        discount: number;
+        grandTotal: number;
+    };
 }
 
 export interface IInvoiceItem {

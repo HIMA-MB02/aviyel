@@ -13,9 +13,9 @@ const InvoiceDocumentRow: React.FunctionComponent<IInvoiceItem> = ({
         <tr className='table-body'>
             <td scope='col'>{index ? index + 1 : 1}</td>
             <td>{itemName}</td>
-            <td>{itemQuantity}</td>
-            <td>{itemUnitPrice}</td>
-            <td>{itemPrice}</td>
+            <td className='td-center'>{itemQuantity}</td>
+            <td className='td-center'>{itemUnitPrice}</td>
+            <td className='td-center'>{itemPrice}</td>
         </tr>
     );
 };

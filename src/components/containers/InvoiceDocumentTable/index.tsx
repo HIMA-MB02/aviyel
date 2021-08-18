@@ -14,14 +14,24 @@ const InvoiceDocumentTable: React.FunctionComponent<IInvoiceDocumentTable> = ({
                     <th scope='col' className='table-item-name'>
                         ITEM
                     </th>
-                    <th scope='col'>QUANTITY</th>
-                    <th scope='col'>UNIT PRICE</th>
-                    <th scope='col'>PRICE</th>
+                    <th scope='col' className='td-center'>
+                        QUANTITY
+                    </th>
+                    <th scope='col' className='td-center'>
+                        UNIT PRICE
+                    </th>
+                    <th scope='col' className='td-center'>
+                        PRICE
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 {items.map((invoiceItem, index) => (
-                    <InvoiceDocumentRow key={`invoice-item-${index}`} index={index} {...invoiceItem} />
+                    <InvoiceDocumentRow
+                        key={`invoice-item-${index}`}
+                        index={index}
+                        {...invoiceItem}
+                    />
                 ))}
             </tbody>
         </table>

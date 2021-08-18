@@ -117,7 +117,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -155,7 +161,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -193,7 +205,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -231,7 +249,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -269,7 +293,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -307,7 +337,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -345,7 +381,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -383,7 +425,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -421,7 +469,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -459,7 +513,13 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     },
     {
         meta: {
@@ -497,6 +557,12 @@ export const initialDocumentList: IDocument[] = [
                 itemUnitPrice: 650,
                 itemPrice: 650
             }
-        ]
+        ],
+        invoiceTotals: {
+            subTotal: 123123,
+            tax: 545,
+            discount: 545,
+            grandTotal: 314354135
+        }
     }
 ];
