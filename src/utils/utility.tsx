@@ -1,3 +1,4 @@
+import React from 'react';
 const formatAMPM = (date: Date) => {
     let hours = date.getHours();
     const ampm = hours >= 12 ? 'pm' : 'am';
@@ -25,4 +26,20 @@ const getDate = (date: Date) => {
 export const getDateTime = (localeString: string) => {
     const date = new Date(localeString);
     return `${formatAMPM(date)} - ${getDate(date)}`;
+};
+
+export const formatRupee = (price: number) => {
+    const x = price.toString();
+    let lastThree = x.substring(x.length - 3);
+    const otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers !== '') lastThree = ',' + lastThree;
+    const result =
+        otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree;
+
+    return (
+        <>
+            &#8377;
+            {result}
+        </>
+    );
 };

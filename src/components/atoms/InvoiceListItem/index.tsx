@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchDocument } from '../../../redux';
-import { getDateTime } from '../../../utils/utility';
+import { formatRupee, getDateTime } from '../../../utils/utility';
 import './styles.css';
 import { IInvoiceListItem } from './types';
 
@@ -15,7 +15,10 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
     const dispatch = useDispatch();
     return (
         <>
-            <div className='list-row' onClick={() => dispatch(fetchDocument(id))}>
+            <div
+                className='list-row'
+                onClick={() => dispatch(fetchDocument(id))}
+            >
                 <div className='listA'>
                     <div className='list-row-item list-row-title'>
                         INV. # - {id}
@@ -29,10 +32,12 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
                     <div className='list-row-item'>
                         {getDateTime(timestamp)}
                     </div>
-                    <div className='list-row-item list-row-title'>{amount}</div>
+                    <div className='list-row-item list-row-title'>
+                        {formatRupee(amount)}
+                    </div>
                 </div>
             </div>
-            <hr className='list-item-hr'/>
+            <hr className='list-item-hr' />
         </>
     );
 };

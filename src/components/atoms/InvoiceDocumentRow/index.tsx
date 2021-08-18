@@ -1,5 +1,6 @@
 import React from 'react';
 import { IInvoiceItem } from '../../../redux/reducers/types';
+import { formatRupee } from '../../../utils/utility';
 
 const InvoiceDocumentRow: React.FunctionComponent<IInvoiceItem> = ({
     index,
@@ -13,9 +14,9 @@ const InvoiceDocumentRow: React.FunctionComponent<IInvoiceItem> = ({
         <tr className='table-body'>
             <td scope='col'>{index ? index + 1 : 1}</td>
             <td>{itemName}</td>
-            <td className='td-center'>{itemQuantity}</td>
-            <td className='td-center'>{itemUnitPrice}</td>
-            <td className='td-center'>{itemPrice}</td>
+            <td className='td-center'>{formatRupee(itemQuantity)}</td>
+            <td className='td-center'>{formatRupee(itemUnitPrice)}</td>
+            <td className='td-center'>{formatRupee(itemPrice)}</td>
         </tr>
     );
 };
