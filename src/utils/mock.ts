@@ -1,3 +1,5 @@
+import { IDocument } from '../redux/reducers/types';
+
 export const initialInvoiceList = [
     {
         id: 2343,
@@ -78,7 +80,7 @@ export const initialInvoiceList = [
     }
 ];
 
-export const initialDocumentList = [
+export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',

@@ -5,7 +5,9 @@ import { DefaultDocument } from '../../atoms';
 import InvoiceDetails from '../InvoiceDetails';
 
 const Display: React.FunctionComponent = () => {
-    const isCurrentlySelctedInvoice = useSelector((state: ReduxState) => state.invoiceReducer.currentlySelectedDocumentId);
+    const isCurrentlySelctedInvoice = useSelector(
+        (state: ReduxState) => state.invoiceReducer.currentlySelectedDocumentId
+    );
     return (
         <>
             {isCurrentlySelctedInvoice !== null ? <InvoiceDetails /> : <DefaultDocument />}

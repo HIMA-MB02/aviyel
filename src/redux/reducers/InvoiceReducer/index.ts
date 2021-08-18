@@ -1,10 +1,11 @@
-import { ACTION_TYPES } from './actions/types';
+import { ACTION_TYPES } from '../../actions/types';
 import { IAction, IInvoiceReducer } from '../types';
 
 const initialState: IInvoiceReducer = {
     invoiceList: [],
     invoiceDocumentList: [],
-    currentlySelectedDocumentId: null
+    currentlySelectedDocumentId: null,
+    currentlySelectedDocumentError: null
 };
 
 const invoiceReducer = (
@@ -20,7 +21,9 @@ const invoiceReducer = (
     case ACTION_TYPES.UPDATE_CURRENTLY_SELCTED_DOCUMENT:
         return {
             ..._state,
-            currentlySelectedDocumentId: payload.currentlySelectedDocumentId
+            currentlySelectedDocumentId: payload.currentlySelectedDocumentId,
+            currentlySelectedDocumentError:
+                payload.currentlySelectedDocumentError
         };
     case ACTION_TYPES.FETCH_DOCUMENT:
         return {
@@ -30,7 +33,17 @@ const invoiceReducer = (
             invoiceDocumentList: [
                 ..._state.invoiceDocumentList,
                 payload.currentlySelectedDocument
-            ]
+            ],
+            currentlySelectedDocumentError:
+                payload.currentlySelectedDocumentError
+        };
+    case ACTION_TYPES.SET_DOCMENT_FETCH_ERROR:
+        return {
+            ..._state,
+            currentlySelectedDocumentId:
+                payload.currentlySelectedDocumentId,
+            currentlySelectedDocumentError:
+                payload.currentlySelectedDocumentError
         };
     default:
         return _state;

@@ -7,6 +7,7 @@ export interface IInvoiceReducer {
     invoiceList: IInvoiceList[];
     invoiceDocumentList: IDocument[];
     currentlySelectedDocumentId: number | null;
+    currentlySelectedDocumentError: string | null;
 }
 
 export interface IDocument {
@@ -22,7 +23,7 @@ export interface IDocument {
 export interface IInvoiceItems {
     id: number;
     itemName: string;
-    itemQuantity: string;
+    itemQuantity: number;
     itemPrice: number;
     itemTotalPrice: number;
 }

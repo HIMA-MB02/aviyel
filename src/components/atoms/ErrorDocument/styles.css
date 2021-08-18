@@ -1,0 +1,7 @@
+.error-message {
+    color: var(--bs-danger);
+}
+
+.message {
+    font-size: 18px;
+}

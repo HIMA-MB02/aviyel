@@ -1,11 +1,28 @@
 import React from 'react';
-import { InvoiceDocument } from '..';
+import { useSelector } from 'react-redux';
+import { InvoiceDocument, ErrorDocument } from '..';
+import { ReduxState } from '../../../redux';
 
 const DefaultDocument: React.FunctionComponent = () => {
+    const isCurrentlySelctedInvoiceError = useSelector(
+        (state: ReduxState) =>
+            state.invoiceReducer.currentlySelectedDocumentError
+    );
+    console.log(isCurrentlySelctedInvoiceError);
     return (
-        <div className="id-container">
+        <div className='id-container'>
             <InvoiceDocument>
-                Please select an invoice to view the document here.
+                {isCurrentlySelctedInvoiceError !== null
+                    ? (
+                        <ErrorDocument
+                            errorMessage={isCurrentlySelctedInvoiceError}
+                        />
+                    )
+                    : (
+                        <div>
+                            Please select an invoice to view the document here.
+                        </div>
+                    )}
             </InvoiceDocument>
         </div>
     );
