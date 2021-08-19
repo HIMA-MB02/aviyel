@@ -5,6 +5,8 @@ import DefaultDocument from './DefaultDocument';
 import ErrorDocument from './ErrorDocument';
 import InvoiceDocumentRow from './InvoiceDocumentRow';
 import Search from './Search';
+import Modal from './Modal';
+import Input from './Input';
 export {
     Navbar,
     InvoiceListItem,
@@ -12,5 +14,7 @@ export {
     DefaultDocument,
     ErrorDocument,
     InvoiceDocumentRow,
-    Search
+    Search,
+    Modal,
+    Input
 };

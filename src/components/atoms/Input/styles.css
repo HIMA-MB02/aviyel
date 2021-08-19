@@ -1,0 +1,12 @@
+.form-input {
+    width: 100%;
+    min-width: 250px;
+}
+
+.input-container {
+    margin: 1rem;
+}
+
+.input-title {
+    margin-bottom: 0.5rem;
+}
