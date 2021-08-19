@@ -7,6 +7,7 @@ import InvoiceDocumentRow from './InvoiceDocumentRow';
 import Search from './Search';
 import Modal from './Modal';
 import Input from './Input';
+import InvoiceModalTableInput from './InvoiceModalTableInput';
 export {
     Navbar,
     InvoiceListItem,
@@ -16,5 +17,6 @@ export {
     InvoiceDocumentRow,
     Search,
     Modal,
-    Input
+    Input,
+    InvoiceModalTableInput
 };

@@ -12,14 +12,17 @@ const Modal: React.FunctionComponent<IModal> = ({ id, title, children }) => {
             role='dialog'
             aria-labelledby={`${id}Label`}
             aria-hidden='true'
+            data-backdrop='static'
+            data-keyboard='false'
         >
             <div className='modal-dialog' role='document'>
                 <div className='modal-content'>
                     <div className='modal-header'>
-                        <h5 className='modal-title' id={`${id}Label`}>
+                        <h4 className='modal-title' id={`${id}Label`}>
                             {title}
-                        </h5>
+                        </h4>
                         <button
+                            id={`${id}-btn`}
                             type='button'
                             className='close'
                             data-dismiss='modal'

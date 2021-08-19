@@ -1,7 +1,7 @@
 // This file provides action creators for InvoiceReducer
 import { ReduxState } from '..';
 import { fetchDocAPI, fetchInvoiceListAPI } from '../../api/getAPI';
-import { IAction } from '../reducers/types';
+import { IAction, IInvoiceItem } from '../reducers/types';
 import { AppDispatch } from '../store';
 
 import { ACTION_TYPES } from './types';
@@ -102,6 +102,25 @@ export const setCurrentDocumentLoading = (isLoading: boolean) => {
         type: ACTION_TYPES.SET_CURRENT_DOCUMENT_LOADING,
         payload: {
             currentlySelectedDocumentLoading: isLoading
+        }
+    };
+};
+
+export const setFormData = (name: string, value: string | IInvoiceItem[]) => {
+    return {
+        type: ACTION_TYPES.SET_FORM_DATA,
+        payload: {
+            name,
+            value
+        }
+    };
+};
+
+export const removeFormData = () => {
+    return {
+        type: ACTION_TYPES.REMOVE_FORM_DATA,
+        payload: {
+            formData: {}
         }
     };
 };

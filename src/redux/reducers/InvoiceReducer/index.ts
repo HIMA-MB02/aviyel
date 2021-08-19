@@ -10,7 +10,10 @@ const initialState: IInvoiceReducer = {
     searchValue: '',
     currentlySelectedDocument: null,
     currentlySelectedDocumentError: null,
-    currentlySelectedDocumentLoading: false
+    currentlySelectedDocumentLoading: false,
+    formData: {
+        invoiceItemsList: []
+    }
 };
 
 const invoiceReducer = (
@@ -71,6 +74,19 @@ const invoiceReducer = (
             ..._state,
             currentlySelectedDocumentLoading:
                 payload.currentlySelectedDocumentLoading
+        };
+    case ACTION_TYPES.SET_FORM_DATA:
+        return {
+            ..._state,
+            formData: {
+                ..._state.formData,
+                [payload.name]: payload.value
+            }
+        };
+    case ACTION_TYPES.REMOVE_FORM_DATA:
+        return {
+            ..._state,
+            formData: payload.formData
         };
     default:
         return _state;

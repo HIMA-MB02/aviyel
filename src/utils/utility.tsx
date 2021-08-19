@@ -53,13 +53,13 @@ export const regexValidations = {
 export const formValidator = (name: string, value: string): string => {
     let errorValue = '';
     switch (name) {
-    case 'name': {
+    case 'text': {
         if (!value.trim().length) {
             errorValue = 'Please enter a valid name';
         }
         break;
     }
-    case 'addressline1': {
+    case 'address': {
         if (!value.trim().length) {
             errorValue = 'Please enter a valid address';
         }
@@ -71,6 +71,13 @@ export const formValidator = (name: string, value: string): string => {
         );
         if (!isEmailRegexValid) {
             errorValue = 'Please enter a valid email';
+        }
+        break;
+    }
+    // just in case
+    case 'number': {
+        if (isNaN(Number(value))) {
+            errorValue = 'Trying to break me, huh?';
         }
         break;
     }

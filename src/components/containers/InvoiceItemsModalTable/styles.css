@@ -1,0 +1,19 @@
+thead {
+    max-width: 100% !important;
+}
+
+.table-body {
+    background-color: white !important;
+    color: black;
+    --bs-table-bg: white;
+}
+tr {
+   height: 50px;
+}
+td {
+    vertical-align: center;
+}
+
+.table-item {
+    min-width: 100px;
+}

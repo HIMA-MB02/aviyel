@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { formValidator } from '../../utility';
-import { FormInputProps } from './types';
+import { IFormInput } from './types';
 
-const useFormInput = (initalValue: string):FormInputProps => {
+const useFormInput = (initalValue: string): IFormInput => {
     const [value, setValue] = useState<any>(initalValue);
     const [typingTimeout, setTypingTimeout] = useState<ReturnType<
         typeof setTimeout

@@ -13,6 +13,13 @@ export interface IInvoiceReducer {
     currentlySelectedDocumentError: string | null;
     currentlySelectedDocumentLoading: boolean;
     searchValue: string;
+    formData: {
+        invoiceItemsList: IInvoiceItem[];
+        name?: string;
+        address?: string;
+        email?: string;
+        pincode?: string;
+    };
 }
 
 export interface IDocument {
@@ -33,7 +40,7 @@ export interface IDocument {
 
 export interface IInvoiceItem {
     index?: number;
-    id?: number;
+    id: number;
     itemName: string;
     itemQuantity: number;
     itemUnitPrice: number;

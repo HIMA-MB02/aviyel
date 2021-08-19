@@ -7,7 +7,7 @@ const InvoiceDocumentTable: React.FunctionComponent<IInvoiceDocumentTable> = ({
     items
 }) => {
     return (
-        <table className='table table-hover table-light'>
+        <table className='table table-light'>
             <thead>
                 <tr>
                     <th scope='col'>#</th>

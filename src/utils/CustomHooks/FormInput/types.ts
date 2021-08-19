@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface FormInputProps {
+export interface IFormInput {
     value: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
     errorText: string;

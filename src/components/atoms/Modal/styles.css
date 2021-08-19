@@ -11,8 +11,14 @@
 
 .modal-content {
     min-width: 50vw !important;
+    background-color: white;
+    padding: 2rem;
 }
 
 .modal-dialog {
     min-width: 50vw !important;
+}
+
+.modal-title {
+    color: black !important;
 }
