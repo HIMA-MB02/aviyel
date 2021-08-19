@@ -47,7 +47,7 @@ const InvoiceList: React.FunctionComponent = () => {
                     id={invoice.id}
                     timestamp={invoice.timestamp}
                     itemsCount={invoice.itemsCount}
-                    createdBy={invoice.createdBy}
+                    customerName={invoice.customerName}
                     amount={invoice.amount}
                 />
             ))}

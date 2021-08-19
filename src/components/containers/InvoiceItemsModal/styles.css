@@ -8,3 +8,28 @@
 .table-container {
     margin: 2rem;
 }
+
+.totals-inv-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 1rem;
+}
+
+.sub-total-invoice,
+.discount-tax {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-total-invoice {
+    margin-right: 2rem;
+}
+
+.dt-input {
+    max-width: 160px;
+}

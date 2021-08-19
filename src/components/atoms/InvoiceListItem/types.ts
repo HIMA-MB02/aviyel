@@ -2,6 +2,6 @@ export interface IInvoiceListItem {
   id: number,
   timestamp: string,
   itemsCount: number,
-  createdBy: string,
+  customerName: string,
   amount: number
 };

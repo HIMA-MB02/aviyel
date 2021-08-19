@@ -9,7 +9,7 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
     id,
     timestamp,
     itemsCount,
-    createdBy,
+    customerName,
     amount
 }) => {
     const dispatch = useDispatch();
@@ -19,17 +19,14 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
     };
     return (
         <>
-            <div
-                className='list-row'
-                onClick={displayInvoice}
-            >
+            <div className='list-row' onClick={displayInvoice}>
                 <div className='listA'>
                     <div className='list-row-item list-row-title'>
                         INV. # - {id}
                     </div>
                     <div className='list-row-item'>Items - {itemsCount}</div>
                     <div className='list-row-item text-primary'>
-                        {createdBy}
+                        {customerName}
                     </div>
                 </div>
                 <div className='listB'>

@@ -13,13 +13,23 @@ export interface IInvoiceReducer {
     currentlySelectedDocumentError: string | null;
     currentlySelectedDocumentLoading: boolean;
     searchValue: string;
-    formData: {
-        invoiceItemsList: IInvoiceItem[];
-        name?: string;
-        address?: string;
-        email?: string;
-        pincode?: string;
-    };
+    formData: IFormData;
+}
+
+export interface IFormData {
+    invoiceItemsList: IInvoiceItem[];
+    totals: IInvoiceTotals;
+    name?: string;
+    address?: string;
+    email?: string;
+    pincode?: string;
+}
+
+export interface IInvoiceTotals {
+    subTotal: number;
+    tax: number;
+    discount: number;
+    grandTotal: number;
 }
 
 export interface IDocument {
@@ -30,12 +40,7 @@ export interface IDocument {
         timestamp: string;
     };
     invoiceItems: IInvoiceItem[];
-    invoiceTotals: {
-        subTotal: number;
-        tax: number;
-        discount: number;
-        grandTotal: number;
-    };
+    invoiceTotals: IInvoiceTotals;
 }
 
 export interface IInvoiceItem {
@@ -51,6 +56,6 @@ export interface IInvoiceList {
     id: number;
     timestamp: string;
     itemsCount: number;
-    createdBy: string;
+    customerName: string;
     amount: number;
 }

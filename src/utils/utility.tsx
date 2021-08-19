@@ -1,4 +1,5 @@
 import React from 'react';
+import { IDocument, IFormData, IInvoiceList } from '../redux/reducers/types';
 const formatAMPM = (date: Date) => {
     let hours = date.getHours();
     const ampm = hours >= 12 ? 'pm' : 'am';
@@ -99,4 +100,26 @@ export const formValidator = (name: string, value: string): string => {
     }
 
     return errorValue;
+};
+
+export const createObjects = (formData: IFormData, id: number): [IInvoiceList, IDocument] => {
+    const timestamp = new Date().toUTCString();
+    const invList: IInvoiceList = {
+        amount: formData.totals.grandTotal,
+        customerName: formData.name ? formData.name : 'Unknown',
+        itemsCount: formData.invoiceItemsList.length,
+        timestamp,
+        id
+    };
+    const invDocument: IDocument = {
+        meta: {
+            customerEmail: formData.email ? formData.email : 'Unknown',
+            customerName: formData.name ? formData.name : 'Unknown',
+            timestamp,
+            id
+        },
+        invoiceItems: formData.invoiceItemsList,
+        invoiceTotals: formData.totals
+    };
+    return [invList, invDocument];
 };

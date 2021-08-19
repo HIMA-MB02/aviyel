@@ -4,17 +4,12 @@ import './styles.css';
 import Modal from '../../atoms/Modal';
 import { IInvoiceItemsModal } from './types';
 import InvoiceItemsModalTable from '../InvoiceItemsModalTable';
+import InvoiceTotalsModal from '../InvoiceTotalsModal';
 
 const InvoiceItemsModal: React.FunctionComponent<IInvoiceItemsModal> = ({
     id,
     title
 }) => {
-    //  onClick={() => dispatch(removeFormData())}
-    const onProceed = () => {
-        const closeButton = document.getElementById(`${id}-btn`);
-        closeButton?.click();
-    };
-
     return (
         <Modal id={id} title={title}>
             <div>
@@ -32,18 +27,7 @@ const InvoiceItemsModal: React.FunctionComponent<IInvoiceItemsModal> = ({
                 <div className='table-container'>
                     <InvoiceItemsModalTable />
                 </div>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-12 text-right'>
-                            <button
-                                className='btn btn-primary'
-                                onClick={onProceed}
-                            >
-                                Proceed
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <InvoiceTotalsModal id={id} />
             </div>
         </Modal>
     );

@@ -1,7 +1,8 @@
 // This file provides action creators for InvoiceReducer
 import { ReduxState } from '..';
 import { fetchDocAPI, fetchInvoiceListAPI } from '../../api/getAPI';
-import { IAction, IInvoiceItem } from '../reducers/types';
+import { createObjects } from '../../utils/utility';
+import { IAction, IFormData, IInvoiceItem, IInvoiceTotals } from '../reducers/types';
 import { AppDispatch } from '../store';
 
 import { ACTION_TYPES } from './types';
@@ -106,7 +107,7 @@ export const setCurrentDocumentLoading = (isLoading: boolean) => {
     };
 };
 
-export const setFormData = (name: string, value: string | IInvoiceItem[]) => {
+export const setFormData = (name: string, value: string | IInvoiceItem[] | IInvoiceTotals) => {
     return {
         type: ACTION_TYPES.SET_FORM_DATA,
         payload: {
@@ -122,5 +123,21 @@ export const removeFormData = () => {
         payload: {
             formData: {}
         }
+    };
+};
+
+export const sendFormData = (formData: IFormData) => {
+    return (dispatch: AppDispatch, getState: () => ReduxState) => {
+        // here we would make api call to update the BE.
+        // just updating local state for now
+        const id = getState().invoiceReducer.invoiceList.length + 1;
+        const [invList, invDoc] = createObjects(formData, id);
+        dispatch({
+            type: ACTION_TYPES.ADD_INV_TO_STATE,
+            payload: {
+                invList,
+                invDoc
+            }
+        });
     };
 };

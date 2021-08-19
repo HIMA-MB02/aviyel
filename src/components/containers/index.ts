@@ -6,6 +6,7 @@ import FloatingAddButton from './FloatingAddButton';
 import CustomerDetailsModal from './CustomerDetailsModal';
 import InvoiceItemsModal from './InvoiceItemsModal';
 import InvoiceItemsModalTable from './InvoiceItemsModalTable';
+import InvoiceTotalsModal from './InvoiceTotalsModal';
 export {
     InvoiceList,
     InvoiceDocumentMeta,
@@ -14,5 +15,6 @@ export {
     FloatingAddButton,
     InvoiceItemsModal,
     CustomerDetailsModal,
-    InvoiceItemsModalTable
+    InvoiceItemsModalTable,
+    InvoiceTotalsModal
 };

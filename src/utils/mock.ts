@@ -5,77 +5,77 @@ export const initialInvoiceList: IInvoiceList[] = [
         id: 2343,
         timestamp: new Date().toUTCString(),
         itemsCount: 2,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2344,
         timestamp: new Date().toUTCString(),
         itemsCount: 3,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2345,
         timestamp: new Date().toUTCString(),
         itemsCount: 4,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2346,
         timestamp: new Date().toUTCString(),
         itemsCount: 5,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2347,
         timestamp: new Date().toUTCString(),
         itemsCount: 6,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2348,
         timestamp: new Date().toUTCString(),
         itemsCount: 7,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2349,
         timestamp: new Date().toUTCString(),
         itemsCount: 8,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2350,
         timestamp: new Date().toUTCString(),
         itemsCount: 9,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2351,
         timestamp: new Date().toUTCString(),
         itemsCount: 10,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2352,
         timestamp: new Date().toUTCString(),
         itemsCount: 11,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     },
     {
         id: 2353,
         timestamp: new Date().toUTCString(),
         itemsCount: 12,
-        createdBy: 'Himanshu Ganapavarapu',
+        customerName: 'Himanshu Ganapavarapu',
         amount: 5000
     }
 ];

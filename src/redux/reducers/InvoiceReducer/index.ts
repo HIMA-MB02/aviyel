@@ -1,5 +1,15 @@
 import { ACTION_TYPES } from '../../actions/types';
-import { IAction, IInvoiceReducer } from '../types';
+import { IAction, IFormData, IInvoiceReducer } from '../types';
+
+const initialFormData: IFormData = {
+    invoiceItemsList: [],
+    totals: {
+        discount: 0,
+        grandTotal: 0,
+        subTotal: 0,
+        tax: 0
+    }
+};
 
 const initialState: IInvoiceReducer = {
     invoiceList: [],
@@ -11,9 +21,7 @@ const initialState: IInvoiceReducer = {
     currentlySelectedDocument: null,
     currentlySelectedDocumentError: null,
     currentlySelectedDocumentLoading: false,
-    formData: {
-        invoiceItemsList: []
-    }
+    formData: initialFormData
 };
 
 const invoiceReducer = (
@@ -87,6 +95,12 @@ const invoiceReducer = (
         return {
             ..._state,
             formData: payload.formData
+        };
+    case ACTION_TYPES.ADD_INV_TO_STATE:
+        return {
+            ..._state,
+            invoiceList: [..._state.invoiceList, payload.invList],
+            invoiceDocuments: [..._state.invoiceDocuments, payload.invDoc]
         };
     default:
         return _state;

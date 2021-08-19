@@ -8,6 +8,9 @@ const InvoiceModalTableInput: React.FunctionComponent = () => {
     const items = useSelector(
         (state: ReduxState) => state.invoiceReducer.formData.invoiceItemsList
     );
+    const totals = useSelector(
+        (state: ReduxState) => state.invoiceReducer.formData.totals
+    );
     const itemName = useFormInput('');
     const quantity = useFormInput('');
     const unitPrice = useFormInput('');
@@ -18,6 +21,7 @@ const InvoiceModalTableInput: React.FunctionComponent = () => {
             quantity.finalValidationCheck() &&
             unitPrice.finalValidationCheck()
         ) {
+            const itemPrice = Number(quantity.value) * Number(unitPrice.value);
             dispatch(
                 setFormData('invoiceItemsList', [
                     ...items,
@@ -26,10 +30,20 @@ const InvoiceModalTableInput: React.FunctionComponent = () => {
                         itemName: itemName.value,
                         itemQuantity: Number(quantity.value),
                         itemUnitPrice: Number(unitPrice.value),
-                        itemPrice:
-                            Number(quantity.value) * Number(unitPrice.value)
+                        itemPrice
                     }
                 ])
+            );
+            dispatch(
+                setFormData('totals', {
+                    ...totals,
+                    subTotal: totals.subTotal + itemPrice,
+                    grandTotal:
+                        totals.subTotal +
+                        itemPrice +
+                        totals.tax -
+                        totals.discount
+                })
             );
             itemName.setValue('');
             quantity.setValue('');
@@ -87,7 +101,7 @@ const InvoiceModalTableInput: React.FunctionComponent = () => {
             </td>
             <td className='text-center'>
                 <button className='btn btn-primary' onClick={handleClick}>
-                    ENTER
+                    Enter
                 </button>
             </td>
         </tr>
