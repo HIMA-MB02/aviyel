@@ -1,0 +1,13 @@
+.inv-sk-timestamp {
+    width: 120px !important;
+}
+
+.inv-sk-number,
+.customer-sk-name,
+.customer-sk-email {
+    width: 200px !important;
+}
+
+.inv-sk-totals {
+    width: 30px !important;
+}

@@ -84,7 +84,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2346,
             timestamp: new Date().toUTCString()
         },
@@ -267,8 +267,8 @@ export const initialDocumentList: IDocument[] = [
     },
     {
         meta: {
-            customerName: 'Akash Shide',
-            customerEmail: 'Ganapavarapu',
+            customerName: 'Akash Shinde',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2344,
             timestamp: new Date().toUTCString()
         },
@@ -312,7 +312,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Siddharth Mundada',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2345,
             timestamp: new Date().toUTCString()
         },
@@ -356,7 +356,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2343,
             timestamp: new Date().toUTCString()
         },
@@ -400,7 +400,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2347,
             timestamp: new Date().toUTCString()
         },
@@ -443,8 +443,8 @@ export const initialDocumentList: IDocument[] = [
     },
     {
         meta: {
-            customerName: 'Akash Shide',
-            customerEmail: 'Ganapavarapu',
+            customerName: 'Akash Shinde',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2348,
             timestamp: new Date().toUTCString()
         },
@@ -488,7 +488,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Siddharth Mundada',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2349,
             timestamp: new Date().toUTCString()
         },
@@ -532,7 +532,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2350,
             timestamp: new Date().toUTCString()
         },
@@ -576,7 +576,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2351,
             timestamp: new Date().toUTCString()
         },
@@ -620,7 +620,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2352,
             timestamp: new Date().toUTCString()
         },
@@ -664,7 +664,7 @@ export const initialDocumentList: IDocument[] = [
     {
         meta: {
             customerName: 'Himanshu Ganapavarapu',
-            customerEmail: 'Ganapavarapu',
+            customerEmail: 'himanshu.ganpa@gmail.com',
             id: 2353,
             timestamp: new Date().toUTCString()
         },

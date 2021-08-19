@@ -1,3 +1,3 @@
 import InvoiceListSkeleton from './InvoiceListSkeleton';
-
-export { InvoiceListSkeleton };
+import DocumentSkeleton from './DocumentSkeleton';
+export { InvoiceListSkeleton, DocumentSkeleton };

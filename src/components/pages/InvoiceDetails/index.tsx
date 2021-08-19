@@ -8,6 +8,7 @@ import {
 } from '../../containers';
 import { useSelector } from 'react-redux';
 import { ReduxState } from '../../../redux';
+import { DocumentSkeleton } from '../../../skeletons';
 
 const InvoiceDetails: React.FunctionComponent = () => {
     const currentDocument = useSelector(
@@ -35,7 +36,7 @@ const InvoiceDetails: React.FunctionComponent = () => {
                     <InvoiceTotals {...currentDocument.invoiceTotals} />
                 </InvoiceDocument>
             )}
-            {isCurrentDocmentLoading && <div>Loading...</div>}
+            {isCurrentDocmentLoading && <DocumentSkeleton />}
         </div>
     );
 };
