@@ -47,9 +47,9 @@ export const fetchDocument = (id: number) => {
             dispatch({
                 type: ACTION_TYPES.UPDATE_CURRENTLY_SELCTED_DOCUMENT,
                 payload: {
-                    currentlySelectedDocumentId:
-                        filterCurrentDocument[0].meta.id,
-                    currentlySelectedDocumentError: null
+                    currentlySelectedDocument: filterCurrentDocument[0],
+                    currentlySelectedDocumentError: null,
+                    currentlySelectedDocumentLoading: false
                 }
             });
         } else {
@@ -60,7 +60,8 @@ export const fetchDocument = (id: number) => {
                         type: ACTION_TYPES.FETCH_DOCUMENT,
                         payload: {
                             currentlySelectedDocument: res.data,
-                            currentlySelectedDocumentError: null
+                            currentlySelectedDocumentError: null,
+                            currentlySelectedDocumentLoading: false
                         }
                     });
                 }
@@ -69,7 +70,8 @@ export const fetchDocument = (id: number) => {
                     type: ACTION_TYPES.SET_DOCMENT_FETCH_ERROR,
                     payload: {
                         currentlySelectedDocumentError: e.message,
-                        currentlySelectedDocumentId: null
+                        currentlySelectedDocument: null,
+                        currentlySelectedDocumentLoading: false
                     }
                 });
             }
@@ -91,6 +93,15 @@ export const setInvoiceListLoading = (isLoading: boolean) => {
         type: ACTION_TYPES.SET_INVOICE_LIST_LOADING,
         payload: {
             invoiceListLoading: isLoading
+        }
+    };
+};
+
+export const setCurrentDocumentLoading = (isLoading: boolean) => {
+    return {
+        type: ACTION_TYPES.SET_CURRENT_DOCUMENT_LOADING,
+        payload: {
+            currentlySelectedDocumentLoading: isLoading
         }
     };
 };

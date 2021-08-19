@@ -11,27 +11,31 @@ import { ReduxState } from '../../../redux';
 
 const InvoiceDetails: React.FunctionComponent = () => {
     const currentDocument = useSelector(
+        (state: ReduxState) => state.invoiceReducer.currentlySelectedDocument
+    );
+    const isCurrentDocmentLoading = useSelector(
         (state: ReduxState) =>
-            state.invoiceReducer.invoiceDocuments.filter(
-                (document) =>
-                    document.meta.id ===
-                    state.invoiceReducer.currentlySelectedDocumentId
-            )[0]
+            state.invoiceReducer.currentlySelectedDocumentLoading
     );
 
     return (
         <div className='id-container'>
             <h5 className='text-secondary iv-title-text'>INVOICE DETAILS</h5>
-            <InvoiceDocument>
-                <InvoiceDocumentMeta
-                    id={currentDocument.meta.id}
-                    timestamp={currentDocument.meta.timestamp}
-                    createdForName={currentDocument.meta.customerName}
-                    createdForEmail={currentDocument.meta.customerEmail}
-                />
-                <InvoiceDocumentTable items={currentDocument.invoiceItems} />
-                <InvoiceTotals {...currentDocument.invoiceTotals} />
-            </InvoiceDocument>
+            {currentDocument && !isCurrentDocmentLoading && (
+                <InvoiceDocument>
+                    <InvoiceDocumentMeta
+                        id={currentDocument.meta.id}
+                        timestamp={currentDocument.meta.timestamp}
+                        createdForName={currentDocument.meta.customerName}
+                        createdForEmail={currentDocument.meta.customerEmail}
+                    />
+                    <InvoiceDocumentTable
+                        items={currentDocument.invoiceItems}
+                    />
+                    <InvoiceTotals {...currentDocument.invoiceTotals} />
+                </InvoiceDocument>
+            )}
+            {isCurrentDocmentLoading && <div>Loading...</div>}
         </div>
     );
 };

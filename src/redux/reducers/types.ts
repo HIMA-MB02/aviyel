@@ -9,8 +9,9 @@ export interface IInvoiceReducer {
     invoiceListError: string | null;
     invoiceDocuments: IDocument[];
     invoiceDocumentLoading: boolean;
-    currentlySelectedDocumentId: number | null;
+    currentlySelectedDocument: IDocument | null;
     currentlySelectedDocumentError: string | null;
+    currentlySelectedDocumentLoading: boolean;
     searchValue: string;
 }
 

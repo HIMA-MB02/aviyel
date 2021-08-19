@@ -8,8 +8,9 @@ const initialState: IInvoiceReducer = {
     invoiceDocuments: [],
     invoiceDocumentLoading: true,
     searchValue: '',
-    currentlySelectedDocumentId: null,
-    currentlySelectedDocumentError: null
+    currentlySelectedDocument: null,
+    currentlySelectedDocumentError: null,
+    currentlySelectedDocumentLoading: false
 };
 
 const invoiceReducer = (
@@ -27,30 +28,33 @@ const invoiceReducer = (
     case ACTION_TYPES.UPDATE_CURRENTLY_SELCTED_DOCUMENT:
         return {
             ..._state,
-            currentlySelectedDocumentId:
-                payload.currentlySelectedDocumentId,
+            currentlySelectedDocument: payload.currentlySelectedDocument,
             currentlySelectedDocumentError:
-                payload.currentlySelectedDocumentError
+                payload.currentlySelectedDocumentError,
+            currentlySelectedDocumentLoading:
+                payload.currentlySelectedDocumentLoading
         };
     case ACTION_TYPES.FETCH_DOCUMENT:
         return {
             ..._state,
-            currentlySelectedDocumentId:
-                payload.currentlySelectedDocument.meta.id,
+            currentlySelectedDocument: payload.currentlySelectedDocument,
             invoiceDocuments: [
                 ..._state.invoiceDocuments,
                 payload.currentlySelectedDocument
             ],
             currentlySelectedDocumentError:
-                payload.currentlySelectedDocumentError
+                payload.currentlySelectedDocumentError,
+            currentlySelectedDocumentLoading:
+                payload.currentlySelectedDocumentLoading
         };
     case ACTION_TYPES.SET_DOCMENT_FETCH_ERROR:
         return {
             ..._state,
-            currentlySelectedDocumentId:
-                payload.currentlySelectedDocumentId,
+            currentlySelectedDocument: payload.currentlySelectedDocument,
             currentlySelectedDocumentError:
-                payload.currentlySelectedDocumentError
+                payload.currentlySelectedDocumentError,
+            currentlySelectedDocumentLoading:
+                payload.currentlySelectedDocumentLoading
         };
     case ACTION_TYPES.SET_SEARCH_VALUE:
         return {
@@ -61,6 +65,12 @@ const invoiceReducer = (
         return {
             ..._state,
             invoiceListLoading: payload.invoiceListLoading
+        };
+    case ACTION_TYPES.SET_CURRENT_DOCUMENT_LOADING:
+        return {
+            ..._state,
+            currentlySelectedDocumentLoading:
+                payload.currentlySelectedDocumentLoading
         };
     default:
         return _state;

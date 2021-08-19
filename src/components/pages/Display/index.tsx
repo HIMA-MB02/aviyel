@@ -6,11 +6,22 @@ import InvoiceDetails from '../InvoiceDetails';
 
 const Display: React.FunctionComponent = () => {
     const isCurrentlySelctedInvoice = useSelector(
-        (state: ReduxState) => state.invoiceReducer.currentlySelectedDocumentId
+        (state: ReduxState) => state.invoiceReducer.currentlySelectedDocument
     );
+    const isCurrentDocmentLoading = useSelector(
+        (state: ReduxState) =>
+            state.invoiceReducer.currentlySelectedDocumentLoading
+    );
+
     return (
         <>
-            {isCurrentlySelctedInvoice !== null ? <InvoiceDetails /> : <DefaultDocument />}
+            {isCurrentlySelctedInvoice !== null || isCurrentDocmentLoading
+                ? (
+                    <InvoiceDetails />
+                )
+                : (
+                    <DefaultDocument />
+                )}
         </>
     );
 };

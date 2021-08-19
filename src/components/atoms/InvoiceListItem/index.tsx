@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchDocument } from '../../../redux';
+import { fetchDocument, setCurrentDocumentLoading } from '../../../redux';
 import { formatRupee, getDateTime } from '../../../utils/utility';
 import './styles.css';
 import { IInvoiceListItem } from './types';
@@ -13,11 +13,15 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
     amount
 }) => {
     const dispatch = useDispatch();
+    const displayInvoice = (e: React.MouseEvent) => {
+        dispatch(setCurrentDocumentLoading(true));
+        dispatch(fetchDocument(id));
+    };
     return (
         <>
             <div
                 className='list-row'
-                onClick={() => dispatch(fetchDocument(id))}
+                onClick={displayInvoice}
             >
                 <div className='listA'>
                     <div className='list-row-item list-row-title'>
