@@ -2,6 +2,7 @@
 import { ReduxState } from '..';
 import { fetchDocAPI, fetchInvoiceListAPI } from '../../api/getAPI';
 import { createObjects } from '../../utils/utility';
+import { initialFormData } from '../reducers/InvoiceReducer';
 import { IAction, IFormData, IInvoiceItem, IInvoiceTotals } from '../reducers/types';
 import { AppDispatch } from '../store';
 
@@ -136,7 +137,8 @@ export const sendFormData = (formData: IFormData) => {
             type: ACTION_TYPES.ADD_INV_TO_STATE,
             payload: {
                 invList,
-                invDoc
+                invDoc,
+                formData: initialFormData
             }
         });
     };

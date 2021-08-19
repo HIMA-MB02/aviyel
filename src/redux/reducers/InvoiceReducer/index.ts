@@ -1,7 +1,7 @@
 import { ACTION_TYPES } from '../../actions/types';
 import { IAction, IFormData, IInvoiceReducer } from '../types';
 
-const initialFormData: IFormData = {
+export const initialFormData: IFormData = {
     invoiceItemsList: [],
     totals: {
         discount: 0,
@@ -100,7 +100,8 @@ const invoiceReducer = (
         return {
             ..._state,
             invoiceList: [..._state.invoiceList, payload.invList],
-            invoiceDocuments: [..._state.invoiceDocuments, payload.invDoc]
+            invoiceDocuments: [..._state.invoiceDocuments, payload.invDoc],
+            formData: payload.formData
         };
     default:
         return _state;

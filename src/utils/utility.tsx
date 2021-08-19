@@ -30,7 +30,8 @@ export const getDateTime = (localeString: string) => {
 };
 
 export const formatRupee = (price: number) => {
-    const x = price.toString();
+    const withDecimal = price.toFixed(2).toString();
+    const x = withDecimal.substring(0, withDecimal.length - 3);
     let lastThree = x.substring(x.length - 3);
     const otherNumbers = x.substring(0, x.length - 3);
     if (otherNumbers !== '') lastThree = ',' + lastThree;
@@ -41,6 +42,7 @@ export const formatRupee = (price: number) => {
         <>
             &#8377;
             {result}
+            {withDecimal.slice(withDecimal.length - 3)}
         </>
     );
 };
