@@ -1,6 +1,6 @@
-import { IDocument } from '../redux/reducers/types';
+import { IDocument, IInvoiceList } from '../redux/reducers/types';
 
-export const initialInvoiceList = [
+export const initialInvoiceList: IInvoiceList[] = [
     {
         id: 2343,
         timestamp: new Date().toUTCString(),

@@ -5,7 +5,10 @@ export interface IAction {
 
 export interface IInvoiceReducer {
     invoiceList: IInvoiceList[];
-    invoiceDocumentList: IDocument[];
+    invoiceListLoading: boolean;
+    invoiceListError: string | null;
+    invoiceDocuments: IDocument[];
+    invoiceDocumentLoading: boolean;
     currentlySelectedDocumentId: number | null;
     currentlySelectedDocumentError: string | null;
     searchValue: string;

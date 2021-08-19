@@ -1,5 +1,5 @@
-import { IDocument } from '../redux/reducers/types';
-import { initialDocumentList } from '../utils/mock';
+import { IDocument, IInvoiceList } from '../redux/reducers/types';
+import { initialDocumentList, initialInvoiceList } from '../utils/mock';
 
 const getAPI = async (webApiUrl: string) => {
     try {
@@ -9,6 +9,8 @@ const getAPI = async (webApiUrl: string) => {
         return err;
     }
 };
+
+export default getAPI;
 
 export const fetchDocAPI = (
     id: number
@@ -30,4 +32,20 @@ export const fetchDocAPI = (
     });
 };
 
-export default getAPI;
+export const fetchInvoiceListAPI = (): Promise<
+    { status: number; data: any } | Error
+> => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const list: IInvoiceList[] = initialInvoiceList;
+            if (list) {
+                resolve({
+                    data: list,
+                    status: 200
+                });
+            } else {
+                reject(new Error('Something went wrong'));
+            }
+        }, 1000);
+    });
+};

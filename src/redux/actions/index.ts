@@ -1,7 +1,6 @@
 // This file provides action creators for InvoiceReducer
 import { ReduxState } from '..';
-import { fetchDocAPI } from '../../api/getAPI';
-import { initialInvoiceList } from '../../utils/mock';
+import { fetchDocAPI, fetchInvoiceListAPI } from '../../api/getAPI';
 import { IAction } from '../reducers/types';
 import { AppDispatch } from '../store';
 
@@ -9,15 +8,29 @@ import { ACTION_TYPES } from './types';
 
 // Fetch the list on the left sidebar
 export const fetchInvoiceList = () => {
-    return (dispatch: AppDispatch) => {
-        setTimeout(() => {
+    return async (dispatch: AppDispatch) => {
+        try {
+            const res: any = await fetchInvoiceListAPI();
+            if (res.status === 200) {
+                dispatch({
+                    type: ACTION_TYPES.FETCH_INVOICE_LIST,
+                    payload: {
+                        invoiceList: res.data,
+                        invoiceListLoading: false,
+                        invoiceListError: null
+                    }
+                });
+            }
+        } catch (e) {
             dispatch({
                 type: ACTION_TYPES.FETCH_INVOICE_LIST,
                 payload: {
-                    invoiceList: initialInvoiceList
+                    invoiceList: [],
+                    invoiceListLoading: false,
+                    invoiceListError: e.message
                 }
             });
-        }, 1000);
+        }
     };
 };
 
@@ -27,7 +40,7 @@ export const fetchDocument = (id: number) => {
         // checks if the document to be viewed exists in the current redux state
         // i.e. state.invoiceReducer.invoiceDocumentList
         const filterCurrentDocument =
-            getState().invoiceReducer.invoiceDocumentList.filter(
+            getState().invoiceReducer.invoiceDocuments.filter(
                 (document) => document.meta.id === id
             );
         if (filterCurrentDocument.length) {
@@ -69,6 +82,15 @@ export const setSearchValue = (searchValue: string): IAction => {
         type: ACTION_TYPES.SET_SEARCH_VALUE,
         payload: {
             searchValue
+        }
+    };
+};
+
+export const setInvoiceListLoading = (isLoading: boolean) => {
+    return {
+        type: ACTION_TYPES.SET_INVOICE_LIST_LOADING,
+        payload: {
+            invoiceListLoading: isLoading
         }
     };
 };

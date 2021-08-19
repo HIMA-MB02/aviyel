@@ -1,6 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchInvoiceList, ReduxState } from '../../../redux';
+import {
+    fetchInvoiceList,
+    ReduxState
+} from '../../../redux';
 import { IInvoiceList } from '../../../redux/reducers/types';
 import InvoiceListSkeleton from '../../../skeletons/InvoiceListSkeleton';
 import { InvoiceListItem, Search } from '../../atoms';
@@ -9,6 +12,9 @@ const InvoiceList: React.FunctionComponent = () => {
     const dispatch = useDispatch();
     const invoiceListRedux = useSelector(
         (state: ReduxState) => state.invoiceReducer.invoiceList
+    );
+    const isInvoiceListLoading = useSelector(
+        (state: ReduxState) => state.invoiceReducer.invoiceListLoading
     );
     const searchValue = useSelector(
         (state: ReduxState) => state.invoiceReducer.searchValue
@@ -20,11 +26,15 @@ const InvoiceList: React.FunctionComponent = () => {
     }, []);
 
     React.useEffect(() => {
-        setInvoicList(
-            invoiceListRedux.filter(
-                (invoice) => invoice.id.toString().includes(searchValue.trim())
-            )
-        );
+        if (searchValue) {
+            setInvoicList(
+                invoiceListRedux.filter((invoice) =>
+                    invoice.id.toString().includes(searchValue.trim())
+                )
+            );
+        } else {
+            setInvoicList(invoiceListRedux);
+        }
     }, [invoiceListRedux, searchValue]);
 
     return (
@@ -41,7 +51,8 @@ const InvoiceList: React.FunctionComponent = () => {
                     amount={invoice.amount}
                 />
             ))}
-            {!invoiceList.length && <InvoiceListSkeleton times={4} />}
+            {isInvoiceListLoading && <InvoiceListSkeleton times={4} />}
+            {!isInvoiceListLoading && !invoiceList.length && <div>Noting found!</div>}
         </>
     );
 };

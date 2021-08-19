@@ -13,16 +13,14 @@ const Search: React.FunctionComponent = () => {
     > | null>(null);
 
     useEffect(() => {
-        if (search.value) {
-            if (typingTimeout) {
-                clearTimeout(typingTimeout);
-            }
-            setTypingTimeout(
-                setTimeout(() => {
-                    dispatch(setSearchValue(search.value));
-                }, 150)
-            );
+        if (typingTimeout) {
+            clearTimeout(typingTimeout);
         }
+        setTypingTimeout(
+            setTimeout(() => {
+                dispatch(setSearchValue(search.value));
+            }, 150)
+        );
     }, [search.value]);
     return (
         <div className='searchbox'>

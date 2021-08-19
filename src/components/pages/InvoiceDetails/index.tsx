@@ -12,7 +12,7 @@ import { ReduxState } from '../../../redux';
 const InvoiceDetails: React.FunctionComponent = () => {
     const currentDocument = useSelector(
         (state: ReduxState) =>
-            state.invoiceReducer.invoiceDocumentList.filter(
+            state.invoiceReducer.invoiceDocuments.filter(
                 (document) =>
                     document.meta.id ===
                     state.invoiceReducer.currentlySelectedDocumentId
