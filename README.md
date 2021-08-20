@@ -1,6 +1,5 @@
-# TO RUN
-
-## npm start OR yarn start
+## TO RUN THE APPLICATION
+ npm start OR yarn start
 
 ## Techonologies Used
 ### React.js
