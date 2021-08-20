@@ -2,9 +2,9 @@
  npm start OR yarn start
 
 ## Techonologies Used
-React.js
-Redux-Thunk
-Bootstrap
+React.js,
+Redux-Thunk,
+Bootstrap,
 TypeScript
 
 
