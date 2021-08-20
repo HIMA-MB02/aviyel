@@ -11,6 +11,9 @@ body {
   padding-top: 6%;
   padding-bottom: 6%;
 }
+p {
+  margin: 0;
+}
 
 input:focus,
 select:focus,

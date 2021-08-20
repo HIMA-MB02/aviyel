@@ -14,7 +14,7 @@ const InvoiceItemsModal: React.FunctionComponent<IInvoiceItemsModal> = ({
         <Modal id={id} title={title}>
             <div>
                 <div className='sub-title'>
-                    <h5>Product Details</h5>
+                    <h5 className='text-secondary'>Product Details</h5>
                     <div className='customer'>
                         <h6 className='text-muted'>CUSTOMER DETAILS</h6>
                         <h6 className='text-black customer-name-text'>

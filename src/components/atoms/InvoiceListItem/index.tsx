@@ -24,14 +24,16 @@ const InvoiceListItem: React.FunctionComponent<IInvoiceListItem> = ({
                     <div className='list-row-item list-row-title'>
                         INV. # - {id}
                     </div>
-                    <div className='list-row-item'>Items - {itemsCount}</div>
+                    <div className='list-row-item'>
+                        <p>Items - {itemsCount}</p>
+                    </div>
                     <div className='list-row-item text-primary'>
-                        {customerName}
+                        <p>{customerName}</p>
                     </div>
                 </div>
                 <div className='listB'>
                     <div className='list-row-item'>
-                        {getDateTime(timestamp)}
+                        <p>{getDateTime(timestamp)}</p>
                     </div>
                     <div className='list-row-item list-row-title'>
                         {formatRupee(amount)}

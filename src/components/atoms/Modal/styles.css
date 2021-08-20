@@ -19,16 +19,6 @@
     min-width: 75vw !important;
 }
 
-@media only screen and (min-width: 1200px) {
-    .modal-content {
-        min-width: 50vw !important;
-    }
-
-    .modal-dialog {
-        min-width: 50vw !important;
-    }
-}
-
 .modal-title {
     color: black !important;
 }

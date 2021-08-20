@@ -120,7 +120,7 @@ const InvoiceTotalsModal: React.FunctionComponent<IInvoiceTotalsModal> = ({
                     </div>
                     <div>
                         <button
-                            className='btn btn-primary btn-lg'
+                            className='btn btn-primary btn-large'
                             onClick={onProceed}
                         >
                             PROCEED
