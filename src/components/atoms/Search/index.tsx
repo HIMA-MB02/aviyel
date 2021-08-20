@@ -29,7 +29,7 @@ const Search: React.FunctionComponent = () => {
                 type='text'
                 name='search'
                 {...search}
-                placeholder='Search'
+                placeholder='Search by Invoice ID'
             ></input>
         </div>
     );

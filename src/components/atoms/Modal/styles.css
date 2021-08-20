@@ -10,13 +10,13 @@
 }
 
 .modal-content {
-    min-width: 75vw !important;
+    min-width: 80vw !important;
     background-color: white;
     padding: 2rem;
 }
 
 .modal-dialog {
-    min-width: 75vw !important;
+    min-width: 80vw !important;
 }
 
 .modal-title {
